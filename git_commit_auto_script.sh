@@ -12,7 +12,7 @@ git add .
 
 currentDate=`date +"%Y-%m-%d %T"`
 git commit -m  "Repo Updated"
-git pull origin gh-pages
-git push origin gh-pages
+git pull origin master
+git push origin master
 
 exit 1
