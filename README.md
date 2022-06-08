@@ -20,7 +20,8 @@ Check out comments in main.py for detail.
 # Github repo auto upload: 
 Check ```copy-github-repos-to-my-new-repos/Readme.md```
 
-# Tutorial (md file based) auto upload from internet links (dumping content, process , upload)
+# Tutorial Upload:
+(md file based) auto tutorial upload from internet links (dumping content, process , upload)
 Check ```tutorial-auto-upload/Readme.md```
 
 
