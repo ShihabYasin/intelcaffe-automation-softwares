@@ -13,4 +13,7 @@ Check out comments in main.py for detail.
 ```
 
 
+## Github automation: 
+
+1. Check ```github_automation.py```, read comments.
 
