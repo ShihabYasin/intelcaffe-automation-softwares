@@ -1,4 +1,8 @@
-# LinkedIN-automation
+# Important: Do not make this repo public, for business secret.
+
+
+
+## LinkedIN-automation
 Some linkedin automation task. (Portfolio Building etc.)
 
 Usage: 
@@ -13,14 +17,14 @@ Check out comments in main.py for detail.
 ```
 
 
-# Github automation: 
+## Github automation: 
 
 1. Check ```github_automation.py```, read comments.
 
-# Github repo auto upload: 
+## Github repo auto upload: 
 Check ```copy-github-repos-to-my-new-repos/Readme.md```
 
-# Tutorial Upload:
+## Tutorial Upload:
 (md file based) auto tutorial upload from internet links (dumping content, process , upload)
 Check ```tutorial-auto-upload/Readme.md```
 
