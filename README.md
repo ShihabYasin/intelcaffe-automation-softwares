@@ -1,4 +1,4 @@
-# linkedin-automation
+# LinkedIN-automation
 Some linkedin automation task. (Portfolio Building etc.)
 
 Usage: 
