@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$/Simple-CRUD-Flask-App" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Simple-IMS" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/django-ajax-integration" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/django-amazon-ecs-with-terraform" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/django-amazon-s3-media-files" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/django-drf-with-elasticsearch" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/django-media-management-" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/django-oauth" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/django-performance-measure" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/django-premitive-caching" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/elastic-beanstalk-howto" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/memory" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/selenium-with-docker-swarm" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/simple-django-channels" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/simple-django-full-text-searching" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/simple-django-pagination" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/simple-django-view-caching" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/simple-django-with-elastic-beanstalk" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/simple-fastapi-docker-with-tdd" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/simple-flask-app-with-amazon-ses-rq" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/tes2" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/tes2/tes2" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/tes4" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/tes5" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/test" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/test1" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/test1/Simple-CRUD-Flask-App" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/test1/test1" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/test2" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/test3" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/test4" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/test5" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/test6" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/test7" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/test8" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/web-scrapping-and-concurrency" vcs="Git" />
+  </component>
+</project>

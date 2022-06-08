@@ -1,0 +1,18 @@
+https://github.com/testdrivenio/fastapi-tdd-docker ::: https://github.com/ShihabYasin/simple-fastapi-docker-with-tdd ::: Updating Repo.
+https://github.com/testdrivenio/django-performance-testing ::: https://github.com/ShihabYasin/django-performance-measure ::: Initial Commit.
+https://github.com/testdrivenio/selenium-grid-docker-swarm ::: https://github.com/ShihabYasin/selenium-with-docker-swarm ::: Repo Commit.
+https://github.com/testdrivenio/django-social-auth ::: https://github.com/ShihabYasin/django-oauth ::: Auth Repo Commit.
+https://github.com/testdrivenio/django-static-media-files ::: https://github.com/ShihabYasin/django-media-management- ::: Django Media management Repo Commit.
+https://github.com/testdrivenio/django-channels-example ::: https://github.com/ShihabYasin/simple-django-channels ::: Django channel management Repo Commit.
+https://github.com/testdrivenio/django-pagination-example ::: https://github.com/ShihabYasin/simple-django-pagination ::: Django page management code Commit.
+https://github.com/testdrivenio/concurrent-web-scraping ::: https://github.com/ShihabYasin/web-scrapping-and-concurrency ::: Concurrent Web Scraper code Commit.
+https://github.com/testdrivenio/django-low-level-cache ::: https://github.com/ShihabYasin/django-premitive-caching ::: Concurrent Django based Low Level Cache code Commit.
+https://github.com/testdrivenio/cache-django-view ::: https://github.com/ShihabYasin/simple-django-view-caching ::: Simple Caching in Django code Commit.
+https://github.com/testdrivenio/django-drf-elasticsearch ::: https://github.com/ShihabYasin/django-drf-with-elasticsearch ::: Simple DRF Elasticsearch code Commit.
+https://github.com/testdrivenio/django-search ::: https://github.com/ShihabYasin/simple-django-full-text-searching ::: Full-text Search with Django code Commit.
+https://github.com/testdrivenio/flask-ses-rq ::: https://github.com/ShihabYasin/simple-flask-app-with-amazon-ses-rq ::: Init code Commit.
+https://github.com/testdrivenio/django-ecs-terraform ::: https://github.com/ShihabYasin/django-amazon-ecs-with-terraform ::: Terraform code Commit.
+https://github.com/testdrivenio/flask-elastic-beanstalk ::: https://github.com/ShihabYasin/elastic-beanstalk-howto ::: Beanstalk code Commit.
+https://github.com/testdrivenio/django-docker-s3 ::: https://github.com/ShihabYasin/django-amazon-s3-media-files ::: How to Up Static and Media Files on Amazon S3 code Commit.
+https://github.com/testdrivenio/django-elastic-beanstalk ::: https://github.com/ShihabYasin/simple-django-with-elastic-beanstalk ::: How to Deploying Django to AWS Elastic Beanstalk code Commit.
+https://github.com/Williano/Invoice-Management-System ::: https://github.com/ShihabYasin/Simple-IMS ::: Invoice Management System code Commit.

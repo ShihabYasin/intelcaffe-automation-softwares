@@ -17,3 +17,10 @@ Check out comments in main.py for detail.
 
 1. Check ```github_automation.py```, read comments.
 
+# Github repo auto upload: 
+Check ```copy-github-repos-to-my-new-repos/Readme.md```
+
+# Tutorial (md file based) auto upload from internet links (dumping content, process , upload)
+Check ```tutorial-auto-upload/Readme.md```
+
+
