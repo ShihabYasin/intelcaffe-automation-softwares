@@ -15,7 +15,7 @@ google-chrome --remote-debugging-port=9222 --user-data-dir="~/ChromeProfile" --d
 ```text
 Check out comments in main.py for detail.
 ```
-3. Auto job apply: (manually login to LN)
+## **AUTO LN JOB APPLY:** (manually login to LN)
 ```python3 apply_jobs_LN.py```
 
 ## Github automation: 
