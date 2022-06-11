@@ -83,17 +83,6 @@ class ApplyJobs:
         return False
 
     @classmethod
-    def check_review_button(cls, driver=driver, page_loading_wait_secs=10):
-        buttons = driver.find_elements_by_tag_name ('button')
-        for button in buttons:
-            # print (button.text)
-            try:
-                if button.text == "Review":
-                    return False
-            except StaleElementReferenceException as e:
-                pass
-
-    @classmethod
     def click_next_job_page(cls, driver=driver, page_loading_wait_secs=10, page_no=2):
 
         buttons = driver.find_elements_by_tag_name ('button')
@@ -107,47 +96,65 @@ class ApplyJobs:
 
 if __name__ == '__main__':
     page_loading_wait_secs = 10
-    # if want to Change job filter collect new url from LN url after visiting appropriate url, insert in job_apply_base_url
     job_apply_base_url = "https://www.linkedin.com/jobs/search/?distance=25.0&f_AL=true&f_EA=true&f_JT=F%2CP%2CC&f_TPR=r604800&f_WT=2&geoId=92000000&keywords={}&sortBy=R"
 
-    # Give different search terms here to apply for jobs
+    # Give different search terms here to grow network
     # search_term_ls = ["Software tester", "Python", "Java", "Software development", "PhP","NLP","Natural Language Processing", "Machine Learning",
     #                   "Laravel","SDLC", "Test driven development", "Data science", "Data engineering", "Software testing",
     #                   "DevOps", "Network security", "Database", "MongoDB", "MySQL", "Redis", "Elasticsearch", "AWS",
     #                   "Django", "Javascript", "Wordpress","Git", "Github", "Docker","Postgres", "PyTorch", "Web development",
     #                   "microservices", "Agile development"]
 
-    search_term_ls = ["Wordpress developer", "Laravel developer", "PhP developer"]
+    search_term_ls = ["Laravel developer", "PhP developer", "Wordpress developer"]
 
 
     for search_term in search_term_ls:
         ls_jobs_links = ApplyJobs.get_job_links(LN_job_profile_url=job_apply_base_url.format(search_term.replace(" ", "%20")))
-        ApplyJobs.click_next_job_page (page_no=2, page_loading_wait_secs=10)
+        ApplyJobs.click_next_job_page (page_no=2, page_loading_wait_secs=6)
         ls_jobs_links += ApplyJobs.get_job_links (LN_job_profile_url=Driver.driver.current_url)
-        ApplyJobs.click_next_job_page (page_no=3, page_loading_wait_secs=10)
+        ApplyJobs.click_next_job_page (page_no=3, page_loading_wait_secs=6)
         ls_jobs_links += ApplyJobs.get_job_links (LN_job_profile_url=Driver.driver.current_url)
+
+        # print(ls_jobs_links)
+        # break
 
         # print(f"Total: {len(ls_jobs_links)}")
         for idx, job_link in enumerate(ls_jobs_links):
             ApplyJobs.driver.get (url=job_link)
             ApplyJobs.driver.refresh ()
             time.sleep (4)
-            ApplyJobs.easy_apply (page_loading_wait_secs=4)
-            ret = ApplyJobs.click_popup_next (page_loading_wait_secs=4)
+            ApplyJobs.easy_apply (page_loading_wait_secs=6)
+            ret = ApplyJobs.click_popup_next (page_loading_wait_secs=6)
             if ret == "Review":
-                if ApplyJobs.check_form_if_blank(page_loading_wait_secs=3):
+                if ApplyJobs.check_form_if_blank(page_loading_wait_secs=6):
                     break
             apply_status = "      XXX   NOT APPLIED"
             if ret == "Submit application":
                 apply_status  = "APPLIED"
+            False_count = 0
             while(ret != "Submit application" ):
-                ret = ApplyJobs.click_popup_next (page_loading_wait_secs=4)
-                if ret == "Review" and ApplyJobs.check_form_if_blank(page_loading_wait_secs=3):
+
+                ret = ApplyJobs.click_popup_next (page_loading_wait_secs=6)
+                print(ret)
+                if ret == "Review" and ApplyJobs.check_form_if_blank(page_loading_wait_secs=6):
                     break
-                if ret == "Next" and ApplyJobs.check_form_if_blank(page_loading_wait_secs=3):
+                if ret == "Next" and ApplyJobs.check_form_if_blank(page_loading_wait_secs=6):
                     break
-                if ApplyJobs.check_if_already_applied_for_job(page_loading_wait_secs=3):
+                if ApplyJobs.check_if_already_applied_for_job(page_loading_wait_secs=6):
                     break
+                if ret == False:
+                    break
+                    # False_count += 1
+                    # if False_count > 3:
+                    #     print("BACKUP CALLING")
+                    #     False_count = 0
+                    #     ApplyJobs.driver.get (url=job_link)
+                    #     ApplyJobs.driver.refresh ()
+                    #     time.sleep (4)
+                    #     ApplyJobs.easy_apply (page_loading_wait_secs=6)
+                    #     ret = ApplyJobs.click_popup_next (page_loading_wait_secs=6)
+
+
             if ret == "Submit application":
                 apply_status  = "APPLIED"
             print(f"{idx}: {apply_status}, Link: {job_link}")
