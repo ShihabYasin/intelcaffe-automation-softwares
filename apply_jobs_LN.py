@@ -93,26 +93,25 @@ class ApplyJobs:
                     time.sleep (page_loading_wait_secs)
             except StaleElementReferenceException as e:
                 pass
+    @classmethod
+    def get_linkedin_job_search_terms_from_file(cls, file_path="linkedin_job_search_terms.txt"):
+        res = []
+        with open(file_path) as search_terms_file:
+            for _search_term in search_terms_file:
+                if '#' not in _search_term:
+                    res.append(_search_term.strip())
+        return res
 
 if __name__ == '__main__':
     page_loading_wait_secs = 10
     job_apply_base_url = "https://www.linkedin.com/jobs/search/?distance=25.0&f_AL=true&f_EA=true&f_JT=F%2CP%2CC&f_TPR=r604800&f_WT=2&geoId=92000000&keywords={}&sortBy=R"
-
     # Give different search terms here to grow network
-    # search_term_ls = ["Software tester", "Python", "Java", "Software development", "PhP","NLP","Natural Language Processing", "Machine Learning",
-    #                   "Laravel","SDLC", "Test driven development", "Data science", "Data engineering", "Software testing",
-    #                   "DevOps", "Network security", "Database", "MongoDB", "MySQL", "Redis", "Elasticsearch", "AWS",
-    #                   "Django", "Javascript", "Wordpress","Git", "Github", "Docker","Postgres", "PyTorch", "Web development",
-    #                   "microservices", "Agile development"]
-
-    search_term_ls = ["Laravel developer", "PhP developer", "Wordpress developer"]
-
-
+    search_term_ls = ApplyJobs.get_linkedin_job_search_terms_from_file(file_path='linkedin_job_search_terms.txt')
     for search_term in search_term_ls:
         ls_jobs_links = ApplyJobs.get_job_links(LN_job_profile_url=job_apply_base_url.format(search_term.replace(" ", "%20")))
-        ApplyJobs.click_next_job_page (page_no=2, page_loading_wait_secs=6)
+        ApplyJobs.click_next_job_page (page_no=2, page_loading_wait_secs=8)
         ls_jobs_links += ApplyJobs.get_job_links (LN_job_profile_url=Driver.driver.current_url)
-        ApplyJobs.click_next_job_page (page_no=3, page_loading_wait_secs=6)
+        ApplyJobs.click_next_job_page (page_no=3, page_loading_wait_secs=8)
         ls_jobs_links += ApplyJobs.get_job_links (LN_job_profile_url=Driver.driver.current_url)
 
         # print(ls_jobs_links)
@@ -122,7 +121,7 @@ if __name__ == '__main__':
         for idx, job_link in enumerate(ls_jobs_links):
             ApplyJobs.driver.get (url=job_link)
             ApplyJobs.driver.refresh ()
-            time.sleep (4)
+            time.sleep (6)
             ApplyJobs.easy_apply (page_loading_wait_secs=6)
             ret = ApplyJobs.click_popup_next (page_loading_wait_secs=6)
             if ret == "Review":
@@ -144,16 +143,6 @@ if __name__ == '__main__':
                     break
                 if ret == False:
                     break
-                    # False_count += 1
-                    # if False_count > 3:
-                    #     print("BACKUP CALLING")
-                    #     False_count = 0
-                    #     ApplyJobs.driver.get (url=job_link)
-                    #     ApplyJobs.driver.refresh ()
-                    #     time.sleep (4)
-                    #     ApplyJobs.easy_apply (page_loading_wait_secs=6)
-                    #     ret = ApplyJobs.click_popup_next (page_loading_wait_secs=6)
-
 
             if ret == "Submit application":
                 apply_status  = "APPLIED"

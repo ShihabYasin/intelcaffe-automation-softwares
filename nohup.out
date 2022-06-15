@@ -1,0 +1,66 @@
+[8343:8343:0614/181826.744558:ERROR:gpu_init.cc(481)] Passthrough is not supported, GL is disabled, ANGLE is 
+
+DevTools listening on ws://127.0.0.1:9222/devtools/browser/9cfffa6e-bc12-453b-b056-ccf912628842
+[8591:8591:0614/181915.673648:ERROR:gpu_init.cc(481)] Passthrough is not supported, GL is disabled, ANGLE is 
+
+DevTools listening on ws://127.0.0.1:9222/devtools/browser/7ea6a700-b302-42d6-8a0e-29ceade6008e
+[8779:8779:0614/181916.974540:ERROR:gpu_init.cc(481)] Passthrough is not supported, GL is disabled, ANGLE is 
+Opening in existing browser session.
+[8866:8866:0614/181918.246136:ERROR:gpu_init.cc(481)] Passthrough is not supported, GL is disabled, ANGLE is 
+Opening in existing browser session.
+[8947:8947:0614/181919.461640:ERROR:gpu_init.cc(481)] Passthrough is not supported, GL is disabled, ANGLE is 
+Opening in existing browser session.
+[9019:9019:0614/181919.911092:ERROR:gpu_init.cc(481)] Passthrough is not supported, GL is disabled, ANGLE is 
+Opening in existing browser session.
+[9107:9107:0614/181920.607667:ERROR:gpu_init.cc(481)] Passthrough is not supported, GL is disabled, ANGLE is 
+Opening in existing browser session.
+[9203:9203:0614/181921.733127:ERROR:gpu_init.cc(481)] Passthrough is not supported, GL is disabled, ANGLE is 
+Opening in existing browser session.
+[9277:9277:0614/181922.999101:ERROR:gpu_init.cc(481)] Passthrough is not supported, GL is disabled, ANGLE is 
+Opening in existing browser session.
+[9381:9381:0614/181924.734368:ERROR:gpu_init.cc(481)] Passthrough is not supported, GL is disabled, ANGLE is 
+Opening in existing browser session.
+[9466:9466:0614/181925.935983:ERROR:gpu_init.cc(481)] Passthrough is not supported, GL is disabled, ANGLE is 
+Opening in existing browser session.
+[9553:9553:0614/181927.131165:ERROR:gpu_init.cc(481)] Passthrough is not supported, GL is disabled, ANGLE is 
+Opening in existing browser session.
+[9674:9674:0614/182011.164699:ERROR:gpu_init.cc(481)] Passthrough is not supported, GL is disabled, ANGLE is 
+
+DevTools listening on ws://127.0.0.1:9222/devtools/browser/7be9d825-12e3-4d05-9d95-189b2c8f8eec
+[9870:9870:0614/182023.209227:ERROR:gpu_init.cc(481)] Passthrough is not supported, GL is disabled, ANGLE is 
+Opening in existing browser session.
+[9966:9966:0614/182034.890763:ERROR:gpu_init.cc(481)] Passthrough is not supported, GL is disabled, ANGLE is 
+
+DevTools listening on ws://127.0.0.1:9222/devtools/browser/4fea7c40-880c-4400-850e-720f3148f205
+[9968:9984:0614/182442.893446:ERROR:quic_network_blackhole_detector.cc(86)] Blackhole detection deadline should be the last deadline.
+[10857:10857:0614/183046.126152:ERROR:gpu_init.cc(481)] Passthrough is not supported, GL is disabled, ANGLE is 
+Opening in existing browser session.
+[10974:10974:0614/183047.301539:ERROR:gpu_init.cc(481)] Passthrough is not supported, GL is disabled, ANGLE is 
+Opening in existing browser session.
+[11054:11054:0614/183048.527154:ERROR:gpu_init.cc(481)] Passthrough is not supported, GL is disabled, ANGLE is 
+Opening in existing browser session.
+[11134:11134:0614/183049.837778:ERROR:gpu_init.cc(481)] Passthrough is not supported, GL is disabled, ANGLE is 
+Opening in existing browser session.
+[11216:11216:0614/183051.129803:ERROR:gpu_init.cc(481)] Passthrough is not supported, GL is disabled, ANGLE is 
+Opening in existing browser session.
+[11299:11299:0614/183052.456872:ERROR:gpu_init.cc(481)] Passthrough is not supported, GL is disabled, ANGLE is 
+Opening in existing browser session.
+[11389:11389:0614/183053.977070:ERROR:gpu_init.cc(481)] Passthrough is not supported, GL is disabled, ANGLE is 
+[9968:9984:0614/184454.133842:ERROR:ssl_client_socket_impl.cc(999)] handshake failed; returned -1, SSL error code 1, net_error -101
+[12274:12274:0614/184641.535349:ERROR:gpu_init.cc(481)] Passthrough is not supported, GL is disabled, ANGLE is 
+
+DevTools listening on ws://127.0.0.1:9222/devtools/browser/d8ecb774-fd97-46e8-a168-d653f00738e6
+[12697:12697:0614/184752.897860:ERROR:gpu_init.cc(481)] Passthrough is not supported, GL is disabled, ANGLE is 
+
+DevTools listening on ws://127.0.0.1:9222/devtools/browser/d470a260-e5b2-4fdf-92d4-51d998450610
+[13179:13179:0614/184916.490688:ERROR:gpu_init.cc(481)] Passthrough is not supported, GL is disabled, ANGLE is 
+
+DevTools listening on ws://127.0.0.1:9222/devtools/browser/764ca0cf-b698-42ce-baed-aa6c79b0e29f
+[13406:13406:0614/184959.101405:ERROR:gpu_init.cc(481)] Passthrough is not supported, GL is disabled, ANGLE is 
+Opening in existing browser session.
+[13535:13535:0614/185012.215960:ERROR:gpu_init.cc(481)] Passthrough is not supported, GL is disabled, ANGLE is 
+
+DevTools listening on ws://127.0.0.1:9222/devtools/browser/8dc5dfe4-affe-4132-916c-8ddb89769837
+[14461:14461:0614/185915.644141:ERROR:gpu_init.cc(481)] Passthrough is not supported, GL is disabled, ANGLE is 
+
+DevTools listening on ws://127.0.0.1:9222/devtools/browser/6d6377d3-8405-4f76-a616-552c52a1b61d

@@ -1,8 +1,24 @@
 # Important: Do not make this repo public, for business secret.
 
 
+# LinkedIN-automation:
+1. To run different LN activity: 
+ 
+```./run_activity.sh```
 
-## LinkedIN-automation
+Input: ```linkedin_search_terms.txt, linkedin_profile.txt, linkedin_activities.txt``` 
+
+
+2. To run different LN job apply: 
+ 
+```./run_job_apply.sh``` 
+
+Input: ```linkedin_job_search_terms.txt```
+
+
+### Deprecated:
+````
+## LinkedIN-automation (OLD):
 Some linkedin automation task. (Portfolio Building etc.)
 
 Usage: 
@@ -17,6 +33,9 @@ Check out comments in main.py for detail.
 ```
 ## **AUTO LN JOB APPLY:** (manually login to LN)
 ```python3 apply_jobs_LN.py```
+
+````
+
 
 ## Github automation: 
 
