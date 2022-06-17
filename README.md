@@ -48,4 +48,11 @@ Check ```copy-github-repos-to-my-new-repos/Readme.md```
 (md file based) auto tutorial upload from internet links (dumping content, process , upload)
 Check ```tutorial-auto-upload/Readme.md```
 
+## LeetCode Submission Automation
+```shell
+google-chrome --remote-debugging-port=9222 --user-data-dir="~/ChromeProfile" --disable-gpu --disable-software-rasterizer
+```
+```python3 leetcode.py```
+
+
 
