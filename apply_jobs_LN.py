@@ -34,30 +34,28 @@ class ApplyJobs:
                     driver.execute_script ("arguments[0].click();", button)
                     time.sleep (page_loading_wait_secs)
             except StaleElementReferenceException as e:
-                break
+                pass
 
     @classmethod
-    def check_form_if_blank(cls, driver=driver,  page_loading_wait_secs=6):
+    def check_form_if_blank(cls, driver=driver, page_loading_wait_secs=10):
         forms = driver.find_elements_by_tag_name ('p')
-        time.sleep(page_loading_wait_secs)
         for form in forms:
             try:
                 if form.text == "Please enter a valid answer":
                     return True
             except StaleElementReferenceException as e:
-                break
+                pass
         return False
 
     @classmethod
-    def check_if_already_applied_for_job(cls, driver=driver, page_loading_wait_secs=6):
+    def check_if_already_applied_for_job(cls, driver=driver, page_loading_wait_secs=10):
         forms = driver.find_elements_by_tag_name ('span')
-        time.sleep(page_loading_wait_secs)
         for form in forms:
             try:
                 if form.text == "Application submitted":
                     return True
             except StaleElementReferenceException as e:
-                break
+                pass
         return False
 
 
@@ -81,7 +79,7 @@ class ApplyJobs:
                     return "Review"
 
             except StaleElementReferenceException as e:
-                break
+                pass
         return False
 
     @classmethod
@@ -94,7 +92,7 @@ class ApplyJobs:
                     driver.execute_script ("arguments[0].click();", button)
                     time.sleep (page_loading_wait_secs)
             except StaleElementReferenceException as e:
-                break
+                pass
     @classmethod
     def get_linkedin_job_search_terms_from_file(cls, file_path="linkedin_job_search_terms.txt"):
         res = []
@@ -127,22 +125,22 @@ if __name__ == '__main__':
             ApplyJobs.easy_apply (page_loading_wait_secs=6)
             ret = ApplyJobs.click_popup_next (page_loading_wait_secs=6)
             if ret == "Review":
-                if ApplyJobs.check_form_if_blank():
+                if ApplyJobs.check_form_if_blank(page_loading_wait_secs=6):
                     break
             apply_status = "      XXX   NOT APPLIED"
             if ret == "Submit application":
                 apply_status  = "APPLIED"
-            loop_count = 0
+            leet_count = 0
             while(ret != "Submit application" ):
-                loop_count += 1
-                if loop_count > 8:
-                    ApplyJobs.driver.refresh ()
+                if leet_count > 7:
+                    ApplyJobs.driver.refresh()
+                    time.sleep(10)
                     break
                 ret = ApplyJobs.click_popup_next (page_loading_wait_secs=6)
                 print(ret)
-                if ret == "Review" and ApplyJobs.check_form_if_blank():
+                if ret == "Review" and ApplyJobs.check_form_if_blank(page_loading_wait_secs=6):
                     break
-                if ret == "Next" and ApplyJobs.check_form_if_blank():
+                if ret == "Next" and ApplyJobs.check_form_if_blank(page_loading_wait_secs=6):
                     break
                 if ApplyJobs.check_if_already_applied_for_job(page_loading_wait_secs=6):
                     break
