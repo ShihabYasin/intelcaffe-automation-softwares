@@ -126,7 +126,7 @@ class LeetCode:
             cls.insert_code (code_string=wrong_code_string)
             time.sleep (random.randint (3, 8))
             cls.submit ()
-            time.sleep (random.randint (3, 10))
+            time.sleep (random.randint (1, 4) * 60 * 60) # converting to hours
 
     @classmethod
     def simulate_correct_code_submission(cls, correct_code_string):
@@ -146,7 +146,7 @@ if __name__ == '__main__':
             break
         leet_soln_file = get_a_random_file (dir=LeetCode.leetcode_solution_dir)
         try:
-            LeetCode.HOURS_TO_DELAY = random.randint (6, 9)
+            LeetCode.HOURS_TO_DELAY = random.randint (6, 12)
             leetcode_url = LeetCode.leetcode_url_from_filename (leet_soln_filename=leet_soln_file)
             if leetcode_url is not None:
                 LeetCode.search (problem_url=leetcode_url)
