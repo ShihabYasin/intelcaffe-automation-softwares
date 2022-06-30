@@ -105,12 +105,13 @@ class ApplyJobs:
 if __name__ == '__main__':
     page_loading_wait_secs = 10
     job_apply_base_url = "https://www.linkedin.com/jobs/search/?distance=25.0&f_AL=true&f_EA=true&f_JT=F%2CP%2CC&f_TPR=r604800&f_WT=2&geoId=92000000&keywords={}&sortBy=R"
-    
     # Give different search terms here to grow network
     search_term_ls = ApplyJobs.get_linkedin_job_search_terms_from_file(file_path='linkedin_job_search_terms.txt')
+
     apply_round = 0
 
     while True:
+
         for search_term in search_term_ls:
             ls_jobs_links = ApplyJobs.get_job_links(LN_job_profile_url=job_apply_base_url.format(search_term.replace(" ", "%20")))
             ApplyJobs.click_next_job_page (page_no=2, page_loading_wait_secs=page_loading_wait_secs)
@@ -118,14 +119,18 @@ if __name__ == '__main__':
             ApplyJobs.click_next_job_page (page_no=3, page_loading_wait_secs=page_loading_wait_secs)
             ls_jobs_links += ApplyJobs.get_job_links (LN_job_profile_url=Driver.driver.current_url)
 
+            # print(ls_jobs_links)
+            # break
+
+            # print(f"Total: {len(ls_jobs_links)}")
             for idx, job_link in enumerate(ls_jobs_links):
                 ApplyJobs.driver.get (url=job_link)
                 ApplyJobs.driver.refresh ()
                 time.sleep (page_loading_wait_secs)
-                ApplyJobs.easy_apply (page_loading_wait_secs=8)
-                ret = ApplyJobs.click_popup_next (page_loading_wait_secs=8)
+                ApplyJobs.easy_apply (page_loading_wait_secs=6)
+                ret = ApplyJobs.click_popup_next (page_loading_wait_secs=6)
                 if ret == "Review":
-                    if ApplyJobs.check_form_if_blank(page_loading_wait_secs=8):
+                    if ApplyJobs.check_form_if_blank(page_loading_wait_secs=6):
                         break
                 apply_status = "      XXX   NOT APPLIED"
                 if ret == "Submit application":
@@ -136,13 +141,13 @@ if __name__ == '__main__':
                         ApplyJobs.driver.refresh()
                         time.sleep(page_loading_wait_secs)
                         break
-                    ret = ApplyJobs.click_popup_next (page_loading_wait_secs=8)
+                    ret = ApplyJobs.click_popup_next (page_loading_wait_secs=6)
                     print(ret)
-                    if ret == "Review" and ApplyJobs.check_form_if_blank(page_loading_wait_secs=8):
+                    if ret == "Review" and ApplyJobs.check_form_if_blank(page_loading_wait_secs=6):
                         break
-                    if ret == "Next" and ApplyJobs.check_form_if_blank(page_loading_wait_secs=8):
+                    if ret == "Next" and ApplyJobs.check_form_if_blank(page_loading_wait_secs=6):
                         break
-                    if ApplyJobs.check_if_already_applied_for_job(page_loading_wait_secs=8):
+                    if ApplyJobs.check_if_already_applied_for_job(page_loading_wait_secs=6):
                         break
                     if ret == False:
                         break
@@ -152,11 +157,13 @@ if __name__ == '__main__':
                 print(f"{idx}: {apply_status}, Link: {job_link}")
 
             # break
+
         days_to_wait_for_next_apply = 2
         apply_round += 1
-        print(f"Apply round {apply_round} has finished")
-        print(f"Waiting for {days_to_wait_for_next_apply} days for next apply start.")
-        time.sleep(days_to_wait_for_next_apply * 24 * 60 * 60)
+        print (f"Apply round {apply_round} has finished")
+        print (f"Waiting for {days_to_wait_for_next_apply} days for next apply start.")
+        time.sleep (days_to_wait_for_next_apply * 24 * 60 * 60)
+
 
 
 
